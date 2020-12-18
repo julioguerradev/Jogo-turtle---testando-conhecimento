@@ -23,14 +23,20 @@ while True:
             input('Quantos graus deseja se mover para a direita ? '))
 # 06 - Executando o comando;
         t.right(direita)
-        t.forward(distancia)
+        if direita > 0:
+            t.forward(distancia)
+        else:
+            continue
 
 # 07 - Definindo rotação para a esquerda;
         esquerda = int(
             input('Quantos graus deseja se mover para a esquerda ? '))
 # 08 - Executando o comando;
         t.left(esquerda)
-        t.forward(distancia)
+        if esquerda > 0:
+            t.forward(distancia)
+        else:
+            continue
 
 # 9 - Definindo movimentação para trás;
         back = int(input('Quantos pixels deseja se mover para trás ? '))
